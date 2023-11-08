@@ -40,24 +40,34 @@ After finishing the quiz, the player can logout of the application by clicking o
    source venv/bin/activate  #On Windows, use venv\Scripts\activate
 
 5. Install the project dependencies:
+
 	Python: https://www.python.org/downloads/
+
 	Django  - (run the following command in the command prompt) python -m pip install Django
+
 	pip install -r requirements.txt or pip install --user -r requirements.txt
 
 7. Run the Django development server:
 
-   python3 manage.py runserver  or
-   python manage.py runserver
+  	python3 manage.py runserver  
+
+	(or)
+
+   	python manage.py runserver
 
 8. Access the application in your web browser at http://127.0.0.1:8000/ 
 
 
 #Usage:
 
-  Enter your name on the welcome screen and click "Start Quiz."
+  
+	Enter your name on the welcome screen and click "Start Quiz."
+	
 
 	Guess the capital of the displayed country and click "Check."
+
 	
 	See if your guess is correct, and click "New Question" for a new one.
+
 
 	Click "Logout" to return to the welcome screen and start a new session.
