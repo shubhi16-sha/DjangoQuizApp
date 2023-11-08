@@ -18,34 +18,36 @@ After finishing the quiz, the player can logout of the application by clicking o
 
 
 ## Prerequisites for running the project:
-Python 3 
-Django  
+1. Python installation --->  Follow the link https://www.python.org/downloads/ for installation.
+2. Django (can be installed from the requirements.txt file, the command is shown below) 
 A web browser 
 
 #Getting Started:
 
-1. Clone the repository to your local machine: 
-git clone https://github.com/shubhi16-sha/DjangoQuizApp.git
+1. Clone the repository to your local machine from the master branch:
+	git clone https://github.com/shubhi16-sha/DjangoQuizApp.git
 
 2. Navigate to the project directory:
-cd CountryCapitalQuiz
+	cd DjangoQuizApp
+	cd CountryCapitalQuiz 
 
-3. Create a virtual environment and activate it:
+3. Create a virtual environment and activate it: (optional)
 
    python -m venv venv
    
    source venv/bin/activate  #On Windows, use venv\Scripts\activate
 
 5. Install the project dependencies:
-   
-   pip install -r requirements.txt
+	Python: https://www.python.org/downloads/
+	Django  - (run the following command in the command prompt) python -m pip install Django
+	pip install -r requirements.txt or pip install --user -r requirements.txt
 
-6. Run the Django development server:
-   bash
+7. Run the Django development server:
 
-   python3 manage.py runserver 
+   python3 manage.py runserver  or
+   python manage.py runserver
 
-7. Access the application in your web browser at http://127.0.0.1:8000/ 
+8. Access the application in your web browser at http://127.0.0.1:8000/ 
 
 
 #Usage:
