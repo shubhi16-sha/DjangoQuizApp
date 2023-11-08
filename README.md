@@ -29,6 +29,7 @@ After finishing the quiz, the player can logout of the application by clicking o
 
 2. Navigate to the project directory:
 	cd DjangoQuizApp
+
 	cd CountryCapitalQuiz 
 
 3. Create a virtual environment and activate it: (optional)
