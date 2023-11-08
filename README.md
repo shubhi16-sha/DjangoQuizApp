@@ -20,7 +20,7 @@ After finishing the quiz, the player can logout of the application by clicking o
 ## Prerequisites for running the project:
 1. Python installation --->  Follow the link https://www.python.org/downloads/ for installation.
 2. Django (can be installed from the requirements.txt file, the command is shown below) 
-A web browser 
+3. A web browser 
 
 #Getting Started:
 
