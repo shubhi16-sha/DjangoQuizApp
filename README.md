@@ -28,6 +28,7 @@ After finishing the quiz, the player can logout of the application by clicking o
 	git clone https://github.com/shubhi16-sha/DjangoQuizApp.git
 
 2. Navigate to the project directory:
+
 	cd DjangoQuizApp
 
 	cd CountryCapitalQuiz 
