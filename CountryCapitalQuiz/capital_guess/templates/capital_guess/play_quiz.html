@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Guess the Capital</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/play_quiz.css' %}">
+</head>
+
+<body>
+  <div class="center-overlay">
+    <h1 class="btn btn-secondary top-left">Welcome, {{ user_name }}!</h1>
+    <!-- Button to return to the index page and logout -->
+    <a href="{% url 'index' %}?user_name=" class="btn btn-secondary top-right">Logout</a>
+    <div class="center">
+      <h2>Guess the Capital of {{ country.name }}.</h2>
+      <input type="text" id="user_guess" placeholder="Enter your guess" />
+      <p id="result"></p>
+      <!-- Correct answer section (hidden by default) -->
+      <div id="answer_section" style="display: none">
+        <p>The correct answer is: <span id="correct_answer"></span></p>
+      </div>
+      <!-- Button to get a new question -->
+      <a href="{% url 'get_new_question' %}?user_name={{ user_name }}" class="btn btn-secondary">New Question</a>
+      <!-- The following button is to check if input is entered and also to check the answer when input is entered-->
+      <button id="check_button">Check</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var answered = false; // Flag to track whether the user has answered
+  
+      $("#check_button").click(function () {
+        if (answered) {
+          // Alert the user that they can only answer once
+          alert("You've already submitted an answer.");
+          return;
+        }
+  
+        var countryId = {{ country.id }};
+        var userGuess = $("#user_guess").val();
+  
+        // Checking if the user has entered an answer or not
+        if (userGuess.trim() === '') {
+          alert("Please enter your guess before checking.");
+          return;
+        }
+  
+        $.ajax({
+          url: "{% url 'check_guess' %}",
+          method: "POST",
+          data: {
+            country_id: countryId,
+            user_guess: userGuess,
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+          },
+          success: function (data) {
+            if (data.correct) {
+              $("#result").text("Correct!").removeClass("incorrect");
+            } else {
+              $("#result").text("Incorrect.").addClass("incorrect");
+              // Show the correct answer
+              $("#answer_section").show();
+              $("#correct_answer").text(data.correct_answer);
+            }
+            answered = true; // Set the answered flag to true
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+
+</html>

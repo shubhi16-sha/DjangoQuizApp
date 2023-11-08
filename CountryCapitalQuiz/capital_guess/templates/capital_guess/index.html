@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Capitals' Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homepage_styles.css' %}">
+</head>
+
+<body>
+  <div class="center-overlay">
+    <h1>Capitals and Countries</h1>
+    <div class="center">
+      <p>Hi, Your name?</p>
+      <input type="text" id="user_name" placeholder="Enter your name" />
+      <button id="start_quiz_button">Start Quiz</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#start_quiz_button").click(function () {
+        var userName = $("#user_name").val();
+        if (userName) {
+          // Redirect to the quiz game page
+          window.location.href =
+            "{% url 'play_quiz' %}?user_name=" + userName;
+        } else {
+          // Handle empty name input
+          alert("Please enter your name to start the quiz.");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

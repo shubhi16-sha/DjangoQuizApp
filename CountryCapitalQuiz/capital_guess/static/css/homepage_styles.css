@@ -1,0 +1,114 @@
+body {
+  background: right/150% no-repeat url('/static/media/map3.jpg');
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.center-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: right/150% no-repeat url('/static/media/map3.jpg');
+  text-align: left;
+}
+
+
+.center {
+  background-color: #ffffff;
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+  animation: bounce 2s infinite;
+  /* Apply the 'bounce' animation */
+}
+
+/* Define the 'bounce' animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+input[type="text"]:focus {
+  border: none;
+}
+
+button {
+  background-color: #58072d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #a76c87;
+}
+
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .center-overlay {
+      background: no-repeat url(/static/media/map3.jpg);
+  }
+}
