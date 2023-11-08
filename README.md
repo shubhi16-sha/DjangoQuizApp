@@ -30,11 +30,10 @@ git clone https://github.com/shubhi16-sha/DjangoQuizApp.git
 2. Navigate to the project directory:
 cd CountryCapitalQuiz
 
-3. Create a virtual environment and activate it: (if needed)
+3. Create a virtual environment and activate it:
 
    python -m venv venv 
-   source venv/bin/activate 
-   # On Windows, use venv\Scripts\activate
+   source venv/bin/activate  #On Windows, use venv\Scripts\activate
 
 4. Install the project dependencies:
    
