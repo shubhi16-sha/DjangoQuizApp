@@ -32,19 +32,20 @@ cd CountryCapitalQuiz
 
 3. Create a virtual environment and activate it:
 
-   python -m venv venv 
+   python -m venv venv
+   
    source venv/bin/activate  #On Windows, use venv\Scripts\activate
 
-4. Install the project dependencies:
+5. Install the project dependencies:
    
    pip install -r requirements.txt
 
-5. Run the Django development server:
+6. Run the Django development server:
    bash
 
    python3 manage.py runserver 
 
-6. Access the application in your web browser at http://127.0.0.1:8000/ 
+7. Access the application in your web browser at http://127.0.0.1:8000/ 
 
 
 #Usage:
